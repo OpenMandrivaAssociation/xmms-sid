@@ -6,6 +6,7 @@ Release: %mkrel 0.%pre.1
 Source: %{name}-%{version}%pre.tar.bz2
 License: GPL
 Group: Sound
+Buildroot: %{_tmppath}/%{name}-%{version}.build
 URL: http://www.tnsp.org/xmms-sid.php
 Requires: xmms 
 BuildRequires: sidplay-devel
