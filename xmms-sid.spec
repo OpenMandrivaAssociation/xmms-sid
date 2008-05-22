@@ -1,4 +1,4 @@
-%define pre beta17
+%define pre beta19
 Summary: XMMS input plugin for C64 SID files
 Name: xmms-sid
 Version: 0.8.0
@@ -26,8 +26,9 @@ Device (SID) chip.
 %setup -q -n %name-%version%pre
 
 %build
+%define _disable_ld_as_needed 1
 %configure2_5x
-%make
+%make LDFLAGS="-Wl,--as-needed -lpthread"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -42,5 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog NEWS README* TODO
 %{_libdir}/xmms/Input/libxmmssid.so
-
+%_datadir/%name
 
