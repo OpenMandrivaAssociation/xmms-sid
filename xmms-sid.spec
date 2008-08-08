@@ -2,7 +2,7 @@
 Summary: XMMS input plugin for C64 SID files
 Name: xmms-sid
 Version: 0.8.0
-Release: %mkrel 0.%pre.1
+Release: %mkrel 2.%pre.1
 Source: %{name}-%{version}%pre.tar.bz2
 License: GPL
 Group: Sound
