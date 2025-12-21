@@ -9,6 +9,11 @@ Group: Sound
 Buildroot: %{_tmppath}/%{name}-%{version}.build
 URL: https://www.tnsp.org/xmms-sid.php
 Requires: xmms 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: sidplay-devel
 BuildRequires: sidplay2-devel
 BuildRequires: libxmms-devel
